@@ -1,0 +1,4 @@
+.metadata/
+NodeJsWebApplication/node_modules/
+node-tests/node_modules/
+notes-node/node_modules/
