@@ -1,0 +1,8 @@
+.metadata/
+.recommenders/
+/.idea/
+AssignmentOne/.idea/
+AssingmentTwo/.idea/
+NodeJsWebApplication/node_modules/
+notes-node/node_modules/
+node_modules/
