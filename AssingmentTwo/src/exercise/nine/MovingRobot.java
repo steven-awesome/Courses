@@ -15,7 +15,7 @@ public class MovingRobot extends Robot {
     public boolean validateNextMove() {
         if (x == 0 && (nextMove == LEFT ||
                 nextMove == LEFT_DOWN_CORNER ||
-                        nextMove == LEFT_UP_CORNER)) {
+                nextMove == LEFT_UP_CORNER)) {
             return false;
         } else if (x == 9 && (nextMove == RIGHT ||
                 nextMove == RIGHT_DOWN_CORNER ||
