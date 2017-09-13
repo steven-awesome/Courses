@@ -1,6 +1,5 @@
 package exercise.one;
 
-import com.sun.deploy.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.StringJoiner;
@@ -26,16 +25,18 @@ public class ReversedSentence {
     public static String printChar2DArray(char[][] arr){
         StringBuilder sb = new StringBuilder();
         for (char[] charArr : arr){
-            sb.append(charArr.toString() + "\n");
+            for (char chr : charArr) {
+                sb.append(chr + "\n");
+            }
         }
         return sb.toString();
     }
 
     public static String reverseByCharacter(String s){
         char[] charArr = s.toCharArray();
-        ArrayList<Character> charArrCopy = new ArrayList<>();
+        StringBuilder charArrCopy = new StringBuilder();
         for(int i = charArr.length - 1; i >=0; i--){
-            charArrCopy.add(charArr[i]);
+            charArrCopy.append(charArr[i]);
         }
         return charArrCopy.toString();
     }
@@ -43,14 +44,18 @@ public class ReversedSentence {
     public static String reverseByWord(String s){
         String[] strArr = s.split(" ");
         StringBuilder sb = new StringBuilder();
-        for (int i = strArr.length - 1; i >= 0; i--) {
-            sb.append(strArr[i] + " ");
+        for (String str : strArr) {
+            //re-using the existing method to do part of the work
+            String reversedWord = reverseByCharacter(str);
+            sb.append(reversedWord + " ");
         }
+        String processedString = truncateSentence(sb.toString());
 
-        return sb.toString();
+        return processedString;
     }
 
     public static String truncateSentence(String s){
+        //Using built-in String method to remove trailing and leading whitespace
         return s.trim();
     }
 

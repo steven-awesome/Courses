@@ -8,11 +8,12 @@ import java.util.Collections;
 import static org.junit.Assert.*;
 
 import org.hamcrest.core.Is;
+import org.junit.Before;
 import org.junit.Test;
 
 public class MovingRobotTest {
 
-	@org.junit.Before
+	@Before
     public void setUp() {
         
     }
