@@ -15,6 +15,15 @@ public class RockPaperScissorsLizardSpock {
     private static final int PLAYER1 = 6;
     private static final int PLAYER2 = 7;
 
+    //Have to declare default constructor so I can use the other one for testing
+    public RockPaperScissorsLizardSpock(){}
+
+    //Declaring loaded constructor for testing purposes
+    public RockPaperScissorsLizardSpock(int conescutiveWins, int lastWinner) {
+        this.conescutiveWins = conescutiveWins;
+        this.lastWinner = lastWinner;
+    }
+
     public int getConescutiveWins(){
         return conescutiveWins;
     }

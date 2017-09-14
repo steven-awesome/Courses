@@ -1,9 +1,5 @@
 package exercise.one;
 
-
-import java.util.ArrayList;
-import java.util.StringJoiner;
-
 /**
  * Created by fista on 7/16/2017.
  */

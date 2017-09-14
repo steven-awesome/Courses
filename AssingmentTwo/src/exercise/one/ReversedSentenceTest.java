@@ -54,7 +54,7 @@ public class ReversedSentenceTest {
     public void truncateSentence() {
         String original = "   test   ";
         String truncated = ReversedSentence.truncateSentence(original);
-        String expected = "test ";
+        String expected = "test";
 
         Assert.assertEquals(expected, truncated);
     }
