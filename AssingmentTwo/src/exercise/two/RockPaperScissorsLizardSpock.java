@@ -15,25 +15,32 @@ public class RockPaperScissorsLizardSpock {
     private static final int PLAYER1 = 6;
     private static final int PLAYER2 = 7;
 
-    //Have to declare default constructor so I can use the other one for testing
-    public RockPaperScissorsLizardSpock(){}
-
-    //Declaring loaded constructor for testing purposes
-    public RockPaperScissorsLizardSpock(int conescutiveWins, int lastWinner) {
-        this.conescutiveWins = conescutiveWins;
-        this.lastWinner = lastWinner;
-    }
-
     public int getConescutiveWins(){
         return conescutiveWins;
     }
 
     public int getLastWinner() { return lastWinner; }
 
+    /**
+     * Uses Math.random() to calculate a number between 1 and 5
+     * @return Integer representing a die roll
+     */
     public int random(){return (int) ( Math.random() * 4) + 1; }
 
+    //Using switch case as personally I find its great for legibility
+    //especially in simple programs. Player 1 & 2 are included in this
+    //method since they are declared as final static anyway and I can
+    //use convert to produce the player string literals for use later on.
+
+    /**
+     * Takes an int and returns a String depending on the case
+     * @param i die roll or player number
+     * @return String representation of either a die roll acton or player number
+     */
     public static String convert(int i) {
         String name = "";
+        //Using switch case as personally I find its great for legibility
+        //especially in simple programs.
         switch (i) {
             case 1:
                 name = "Rock";
@@ -50,6 +57,9 @@ public class RockPaperScissorsLizardSpock {
             case 5:
                 name = "Spock";
                 break;
+            //Player 1 & 2 are included in this method since they are declared
+            //as final static anyway and I can use convert to produce the player
+            //string literals for use later on.
             case 6:
                 name = "Player 1";
                 break;
@@ -60,8 +70,17 @@ public class RockPaperScissorsLizardSpock {
         return name;
     }
 
+    /**
+     * Most game logic is done in the play method. After one player has 3
+     * consecutive wins, the game ends. A player wins a round by rolling
+     * a die and the resulting roll's corresponding action beats the other
+     * players roll.
+     * @param player1 1st player in the game
+     * @param player2 2nd player in the game
+     */
     public void play(int player1, int player2) {
 
+        //While loop will end once any player has 3 consecutive wins
        while(getConescutiveWins() <= 3){
            int winner = 0;
            int playerOneRoll = random();
@@ -72,7 +91,11 @@ public class RockPaperScissorsLizardSpock {
            if(playerOneRoll == playerTwoRoll){
                System.out.println("It's a tie! Restarting"
                                     +"\n=================\n");
+               //restarting the loop
                continue;
+               //conditions can be presented from one players perspective
+               //and if that player doesn't win, the other player is made
+               //the winner
            } else if (playerOneRoll == ROCK && playerTwoRoll == PAPER ||
                    playerOneRoll == ROCK && playerTwoRoll == SPOCK ||
                    playerOneRoll == PAPER && playerTwoRoll == SCISSORS ||
@@ -91,12 +114,16 @@ public class RockPaperScissorsLizardSpock {
            System.out.println("Winner is: " + convert(winner)
                    +"\n=================\n");
 
+           //Checking if a player has won for the first time or it's a
+           //consecutive win
            if (getLastWinner() == 0 || getLastWinner() == winner) {
                conescutiveWins++;
            } else {
                conescutiveWins = 0;
            }
 
+           //setting lastWinner to the current round winner to be compared on next
+           //loop iteration
            lastWinner = winner;
        }
 

@@ -1,5 +1,7 @@
 package exercise.one;
 
+import java.util.Scanner;
+
 /**
  * Created by fista on 7/16/2017.
  */
@@ -18,6 +20,12 @@ public class ReversedSentence {
         return sb.toString();
     }
 
+    /**
+     * Transforms a sequential list of the characters from 2D array
+     * to String
+     * @param arr a 2 dimension character array
+     * @return String representation of the 2D chr array
+     */
     public static String printChar2DArray(char[][] arr){
         StringBuilder sb = new StringBuilder();
         for (char[] charArr : arr){
@@ -28,6 +36,12 @@ public class ReversedSentence {
         return sb.toString();
     }
 
+    /**
+     * A string is reversed char by char starting at the last index
+     * and returned as a new string
+     * @param s String to be reversed
+     * @return new String
+     */
     public static String reverseByCharacter(String s){
         char[] charArr = s.toCharArray();
         StringBuilder charArrCopy = new StringBuilder();
@@ -37,22 +51,34 @@ public class ReversedSentence {
         return charArrCopy.toString();
     }
 
+    /**
+     * A String is reversed word by word and returned as a new String
+     * @param s String to be reversed
+     * @return new String
+     */
     public static String reverseByWord(String s){
         String[] strArr = s.split(" ");
         StringBuilder sb = new StringBuilder();
-        for (String str : strArr) {
-            //re-using the existing method to do part of the work
-            String reversedWord = reverseByCharacter(str);
-            sb.append(reversedWord + " ");
+        for (int i = strArr.length; i >= 0; i--) {
+            sb.append(strArr[i] + " ");
         }
         String processedString = truncateSentence(sb.toString());
 
         return processedString;
     }
 
+    /**
+     * Uses String trim() method to trim a provided String
+     * @param s String to trim
+     * @return new String without trailing or leading whitespace
+     */
     public static String truncateSentence(String s){
-        //Using built-in String method to remove trailing and leading whitespace
         return s.trim();
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please ");
     }
 
 
