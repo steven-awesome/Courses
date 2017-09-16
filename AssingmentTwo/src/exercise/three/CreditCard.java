@@ -54,7 +54,7 @@ public class CreditCard {
     public boolean validateCompany() {
 
         //Uses Regex to validate a card company before checking for and setting
-        //individual company names
+        //individual company names. I felt there was less redundancy this way
         if (getCcNumber().matches("^4\\d*|5\\d*|6\\d*|(37)\\d*")) {
             if (getCcNumber().startsWith("4")) {
                 company = "Visa";
@@ -117,6 +117,7 @@ public class CreditCard {
                 }
             }
 
+            //validating the sum of evenSum and oddSum
             return validateSums();
         } catch (NumberFormatException nfe) {
             System.out.println("CC number String contains non-numeric or " +

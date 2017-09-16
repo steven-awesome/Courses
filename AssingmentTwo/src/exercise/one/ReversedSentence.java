@@ -30,8 +30,9 @@ public class ReversedSentence {
         StringBuilder sb = new StringBuilder();
         for (char[] charArr : arr){
             for (char chr : charArr) {
-                sb.append(chr + "\n");
+                sb.append(chr);
             }
+            sb.append("\n");
         }
         return sb.toString();
     }
@@ -59,7 +60,7 @@ public class ReversedSentence {
     public static String reverseByWord(String s){
         String[] strArr = s.split(" ");
         StringBuilder sb = new StringBuilder();
-        for (int i = strArr.length; i >= 0; i--) {
+        for (int i = strArr.length - 1; i >= 0; i--) {
             sb.append(strArr[i] + " ");
         }
         String processedString = truncateSentence(sb.toString());
@@ -77,8 +78,22 @@ public class ReversedSentence {
     }
 
     public static void main(String[] args) {
+        char[][] charArray = new char[3][80];
+        String temp;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please ");
+        for (int i = 0; i < 3; i++) {
+            temp = new String();
+            System.out.println("Please enter a sentence");
+            temp = sc.nextLine();
+            if (i == 0) {
+                charArray[i] = reverseByCharacter(temp).toCharArray();
+            } else if (i == 1){
+                charArray[i] = reverseByWord(temp).toCharArray();
+            } else if (i == 2) {
+                charArray[i] = change5thPosition(temp).toCharArray();
+            }
+            System.out.println(printChar2DArray(charArray));
+        }
     }
 
 
