@@ -1,11 +1,12 @@
 package exercise.two;
 
 /**
- * Created by fista on 7/16/2017.
+ * Steven Morrissey
+ * COMP 268 - Assignment 2, Exercise 2
  */
 public class RockPaperScissorsLizardSpock {
 
-    private int conescutiveWins;
+    private int consecutiveWins;
     private int lastWinner;
     private static final int LIZARD = 4;
     private static final int SPOCK = 5;
@@ -15,8 +16,8 @@ public class RockPaperScissorsLizardSpock {
     private static final int PLAYER1 = 6;
     private static final int PLAYER2 = 7;
 
-    public int getConescutiveWins(){
-        return conescutiveWins;
+    public int getConsecutiveWins(){
+        return consecutiveWins;
     }
 
     public int getLastWinner() { return lastWinner; }
@@ -81,7 +82,7 @@ public class RockPaperScissorsLizardSpock {
     public void play(int player1, int player2) {
 
         //While loop will end once any player has 3 consecutive wins
-       while(getConescutiveWins() <= 3){
+       while(getConsecutiveWins() < 3){
            int winner = 0;
            int playerOneRoll = random();
            int playerTwoRoll = random();
@@ -91,6 +92,8 @@ public class RockPaperScissorsLizardSpock {
            if(playerOneRoll == playerTwoRoll){
                System.out.println("It's a tie! Restarting"
                                     +"\n=================\n");
+               consecutiveWins = 0;
+               lastWinner = 0;
                //restarting the loop
                continue;
                //conditions can be presented from one players perspective
@@ -117,9 +120,9 @@ public class RockPaperScissorsLizardSpock {
            //Checking if a player has won for the first time or it's a
            //consecutive win
            if (getLastWinner() == 0 || getLastWinner() == winner) {
-               conescutiveWins++;
+               consecutiveWins++;
            } else {
-               conescutiveWins = 0;
+               consecutiveWins = 0;
            }
 
            //setting lastWinner to the current round winner to be compared on next

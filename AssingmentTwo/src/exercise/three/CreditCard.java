@@ -5,6 +5,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.regex.Pattern;
 
+/**
+ * Steven Morrissey
+ * COMP 268 - Assignment 2, Exercise 3
+ */
 public class CreditCard {
     private int evenSum;
     private int oddSum;

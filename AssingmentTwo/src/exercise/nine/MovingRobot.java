@@ -4,6 +4,10 @@ package exercise.nine;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * Steven Morrissey
+ * COMP 268 - Assignment 2, Exercise 9
+ */
 public class MovingRobot extends Robot {
     ArrayList<Integer> moves = new ArrayList<>();
     int nextMove = 0;
@@ -12,6 +16,11 @@ public class MovingRobot extends Robot {
         super(x, y);
     }
 
+    /**
+     * Verifies the next move for a robot does not take the out of
+     * bounds
+     * @return boolean whether next move is within boundaries or not
+     */
     public boolean validateNextMove() {
         if (x == 0 && (nextMove == LEFT ||
                 nextMove == LEFT_DOWN_CORNER ||
@@ -32,25 +41,41 @@ public class MovingRobot extends Robot {
                 nextMove == RIGHT_DOWN_CORNER)) {
             return false;
         }
-        moves.add(nextMove);
         return true;
     }
 
+    /**
+     * Generates a new random number from 1-9
+     * @return int result of new generated random int
+     */
     public int generateNextMove() {
         return new Random().nextInt(8) +1;
     }
 
+    /**
+     * Verifies if 2 robots occupy the same x & y coordinates
+     * @param r1 1st robot
+     * @param r2 2nd robot
+     * @return boolean whether the 2 robots are occupying same space
+     */
     public static boolean sameSlot(Robot r1, Robot r2) {
         return r1.getX() == r2.getX()
                 && r1.getY() == r2.getY();
     }
 
+    /**
+     * iterates through a robots history of moves and prints result
+     * @return String history of robots moves
+     */
     public String printMoves() {
         StringBuilder movesString = new StringBuilder();
         moves.forEach(move -> movesString.append(move + ", ").toString());
         return moves.toString();
     }
 
+    /**
+     * Assigns the robot to the space specified in the nextMove field
+     */
     public void move() {
         switch(nextMove) {
             case UP:
@@ -82,6 +107,7 @@ public class MovingRobot extends Robot {
                 setY(getY()+1);
                 break;
         }
+        moves.add(nextMove);
         System.out.println("New coordinates: " + getX() + " " + getY());
         nextMove = 0;
     }
