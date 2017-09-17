@@ -23,6 +23,7 @@ public class CreditCard {
 
     /**
      * Verifies the sums at the end of the luhn algorithm for integrity
+     *
      * @return boolean whether the CC number is valid or not
      */
     public boolean isDivisibleBy10() {
@@ -40,6 +41,7 @@ public class CreditCard {
 
     /**
      * Final verification of all 3 requirements of a valid CC number
+     *
      * @return boolean whether CC number is valid or not
      */
     public boolean isValid() {
@@ -53,6 +55,7 @@ public class CreditCard {
 
     /**
      * Verifies the starting of a CC number for a valid card provider
+     *
      * @return boolean whether CC number is from a valid provider
      */
     public boolean validateCompany() {
@@ -70,7 +73,7 @@ public class CreditCard {
                 company = "Discover";
             }
             System.out.println("Valid card " + getCcNumber() +
-                                " issued by: " + getCompany());
+                    " issued by: " + getCompany());
             return true;
         }
         return true;
@@ -78,6 +81,7 @@ public class CreditCard {
 
     /**
      * Verified a cc Number for valid length range
+     *
      * @return boolean whether CC number is within valid range
      */
     public boolean validateLength() {
@@ -91,9 +95,10 @@ public class CreditCard {
 
     /**
      * This implements the main calculation of luhn algorithm.
+     *
      * @return boolean whether the CC number meets the luhn criteria
      */
-    public boolean validateNumber(){
+    public boolean validateNumber() {
         String ccNum = getCcNumber();
 
         try {
@@ -112,7 +117,7 @@ public class CreditCard {
             for (int i = numArray.length - 1; i >= 0; i--) {
                 if ((i + 2) % 2 == 0) {
                     if (numArray[i] * 2 > 9) {
-                        evenSum += (numArray[i]*2) % 10 + 1;
+                        evenSum += (numArray[i] * 2) % 10 + 1;
                     } else {
                         evenSum += numArray[i] * 2;
                     }
@@ -125,7 +130,7 @@ public class CreditCard {
             return validateSums();
         } catch (NumberFormatException nfe) {
             System.out.println("CC number String contains non-numeric or " +
-                                "invalid characters");
+                    "invalid characters");
         }
 
         return false;
@@ -133,6 +138,7 @@ public class CreditCard {
 
     /**
      * Verifies if the sum at the end of the luhn algorithm is divisible by 10
+     *
      * @return boolean whether divisible by 10 or not
      */
     public boolean validateSums() {

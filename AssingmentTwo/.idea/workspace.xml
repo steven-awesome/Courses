@@ -4,22 +4,9 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="102a1b33-28b5-452a-aee3-9d30f029c99e" name="Default" comment="Removed UTs due to library complications and added more program profile info, and one for each exercise">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AssingmentTwo/exercise/nine/MovingRobot.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AssingmentTwo/exercise/nine/Robot.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AssingmentTwo/exercise/one/ReversedSentence.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AssingmentTwo/exercise/one/ReversedSentenceTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AssingmentTwo/exercise/three/CreditCard.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AssingmentTwo/exercise/two/RockPaperScissorsLizardSpock.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exercise/nine/My_Program_Profile.docx" afterPath="$PROJECT_DIR$/src/exercise/nine/My_Program_Profile.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exercise/one/My_Program_Profile.docx" afterPath="$PROJECT_DIR$/src/exercise/one/My_Program_Profile.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exercise/two/My_Program_Profile.docx" afterPath="$PROJECT_DIR$/src/exercise/two/My_Program_Profile.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="102a1b33-28b5-452a-aee3-9d30f029c99e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exercise/nine/MovingRobot.java" afterPath="$PROJECT_DIR$/src/exercise/nine/MovingRobot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exercise/nine/MovingRobotTest.java" afterPath="$PROJECT_DIR$/src/exercise/nine/MovingRobotTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exercise/one/ReversedSentence.java" afterPath="$PROJECT_DIR$/src/exercise/one/ReversedSentence.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exercise/one/ReversedSentenceTest.java" afterPath="$PROJECT_DIR$/src/exercise/one/ReversedSentenceTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exercise/three/CreditCard.java" afterPath="$PROJECT_DIR$/src/exercise/three/CreditCard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exercise/two/RockPaperScissorsLizardSpock.java" afterPath="$PROJECT_DIR$/src/exercise/two/RockPaperScissorsLizardSpock.java" />
     </list>
@@ -39,8 +26,8 @@
       <file leaf-file-name="ReversedSentence.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/exercise/one/ReversedSentence.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="72" column="17" lean-forward="false" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+            <state relative-caret-position="144">
+              <caret line="65" column="39" lean-forward="true" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
               <folding>
                 <element signature="e#2368#2369#0" expanded="true" />
                 <element signature="e#2399#2400#0" expanded="true" />
@@ -49,12 +36,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RockPaperScissorsLizardSpock.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RockPaperScissorsLizardSpock.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/exercise/two/RockPaperScissorsLizardSpock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-234">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
-              <folding />
+            <state relative-caret-position="270">
+              <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+              <folding>
+                <element signature="e#520#521#0" expanded="true" />
+                <element signature="e#592#593#0" expanded="true" />
+                <element signature="e#625#626#0" expanded="true" />
+                <element signature="e#786#787#0" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreditCard.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreditCard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/exercise/three/CreditCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="127" column="38" lean-forward="false" selection-start-line="127" selection-start-column="38" selection-end-line="127" selection-end-column="38" />
+            <state relative-caret-position="2322">
+              <caret line="132" column="42" lean-forward="true" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -94,8 +87,8 @@
       <file leaf-file-name="MovingRobot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/exercise/nine/MovingRobot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-837">
-              <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="171">
+              <caret line="82" column="24" lean-forward="true" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,12 +143,12 @@
         <option value="$PROJECT_DIR$/src/exercise/nine/Robot.java" />
         <option value="$PROJECT_DIR$/src/exercise/two/RockPaperScissorsLizardSpockTest.java" />
         <option value="$PROJECT_DIR$/src/exercise/three/CreditCardTest.java" />
-        <option value="$PROJECT_DIR$/src/exercise/two/RockPaperScissorsLizardSpock.java" />
-        <option value="$PROJECT_DIR$/src/exercise/three/CreditCard.java" />
-        <option value="$PROJECT_DIR$/src/exercise/nine/MovingRobot.java" />
         <option value="$PROJECT_DIR$/src/exercise/nine/MovingRobotTest.java" />
         <option value="$PROJECT_DIR$/src/exercise/one/ReversedSentence.java" />
         <option value="$PROJECT_DIR$/src/exercise/one/ReversedSentenceTest.java" />
+        <option value="$PROJECT_DIR$/src/exercise/three/CreditCard.java" />
+        <option value="$PROJECT_DIR$/src/exercise/nine/MovingRobot.java" />
+        <option value="$PROJECT_DIR$/src/exercise/two/RockPaperScissorsLizardSpock.java" />
       </list>
     </option>
   </component>
@@ -655,7 +648,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500249301897</updated>
-      <workItem from="1505265631994" duration="53406000" />
+      <workItem from="1505265631994" duration="53519000" />
     </task>
     <task id="LOCAL-00001" summary="added UTs">
       <created>1505276444211</created>
@@ -685,7 +678,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505579451216</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finally finisshhheeddddd">
+      <created>1505671851244</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1505671851244</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -721,7 +721,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53406000" />
+    <option name="totallyTimeSpent" value="53519000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -778,7 +778,8 @@
     <MESSAGE value="added more UTs and started program profile" />
     <MESSAGE value="Removed UTs due to library complications and added more program profile info, and one for each exercise" />
     <MESSAGE value="new commit just to save progress on reversed sentence." />
-    <option name="LAST_COMMIT_MESSAGE" value="new commit just to save progress on reversed sentence." />
+    <MESSAGE value="Finally finisshhheeddddd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finally finisshhheeddddd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1025,41 +1026,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/exercise/nine/MovingRobot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-837">
-          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exercise/two/RockPaperScissorsLizardSpock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/exercise/one/ReversedSentenceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exercise/one/ReversedSentence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="72" column="17" lean-forward="false" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-          <folding>
-            <element signature="e#2368#2369#0" expanded="true" />
-            <element signature="e#2399#2400#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1082,9 +1054,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exercise/three/CreditCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="127" column="38" lean-forward="false" selection-start-line="127" selection-start-column="38" selection-end-line="127" selection-end-column="38" />
+        <state relative-caret-position="2322">
+          <caret line="132" column="42" lean-forward="true" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercise/nine/MovingRobot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="82" column="24" lean-forward="true" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercise/one/ReversedSentence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="65" column="39" lean-forward="true" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
+          <folding>
+            <element signature="e#2368#2369#0" expanded="true" />
+            <element signature="e#2399#2400#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercise/two/RockPaperScissorsLizardSpock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+          <folding>
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

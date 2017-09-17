@@ -16,17 +16,22 @@ public class RockPaperScissorsLizardSpock {
     private static final int PLAYER1 = 6;
     private static final int PLAYER2 = 7;
 
-    public int getConsecutiveWins(){
+    public int getConsecutiveWins() {
         return consecutiveWins;
     }
 
-    public int getLastWinner() { return lastWinner; }
+    public int getLastWinner() {
+        return lastWinner;
+    }
 
     /**
      * Uses Math.random() to calculate a number between 1 and 5
+     *
      * @return Integer representing a die roll
      */
-    public int random(){return (int) ( Math.random() * 4) + 1; }
+    public int random() {
+        return (int) (Math.random() * 4) + 1;
+    }
 
     //Using switch case as personally I find its great for legibility
     //especially in simple programs. Player 1 & 2 are included in this
@@ -35,6 +40,7 @@ public class RockPaperScissorsLizardSpock {
 
     /**
      * Takes an int and returns a String depending on the case
+     *
      * @param i die roll or player number
      * @return String representation of either a die roll acton or player number
      */
@@ -76,59 +82,60 @@ public class RockPaperScissorsLizardSpock {
      * consecutive wins, the game ends. A player wins a round by rolling
      * a die and the resulting roll's corresponding action beats the other
      * players roll.
+     *
      * @param player1 1st player in the game
      * @param player2 2nd player in the game
      */
     public void play(int player1, int player2) {
 
         //While loop will end once any player has 3 consecutive wins
-       while(getConsecutiveWins() < 3){
-           int winner = 0;
-           int playerOneRoll = random();
-           int playerTwoRoll = random();
-           System.out.println("PLayer 1 roll: " + convert(playerOneRoll)
-                                +"\nPlayer 2 roll: " + convert(playerTwoRoll)
-                                +"\n");
-           if(playerOneRoll == playerTwoRoll){
-               System.out.println("It's a tie! Restarting"
-                                    +"\n=================\n");
-               consecutiveWins = 0;
-               lastWinner = 0;
-               //restarting the loop
-               continue;
-               //conditions can be presented from one players perspective
-               //and if that player doesn't win, the other player is made
-               //the winner
-           } else if (playerOneRoll == ROCK && playerTwoRoll == PAPER ||
-                   playerOneRoll == ROCK && playerTwoRoll == SPOCK ||
-                   playerOneRoll == PAPER && playerTwoRoll == SCISSORS ||
-                   playerOneRoll == PAPER && playerTwoRoll == LIZARD ||
-                   playerOneRoll == SCISSORS && playerTwoRoll == ROCK ||
-                   playerOneRoll == SCISSORS && playerTwoRoll == SPOCK ||
-                   playerOneRoll == LIZARD && playerTwoRoll == SCISSORS ||
-                   playerOneRoll == LIZARD && playerTwoRoll == ROCK ||
-                   playerOneRoll == SPOCK && playerTwoRoll == LIZARD ||
-                   playerOneRoll == SPOCK && playerTwoRoll == PAPER) {
-               winner = player2;
-           } else {
-               winner = player1;
-           }
+        while (getConsecutiveWins() < 3) {
+            int winner = 0;
+            int playerOneRoll = random();
+            int playerTwoRoll = random();
+            System.out.println("PLayer 1 roll: " + convert(playerOneRoll)
+                    + "\nPlayer 2 roll: " + convert(playerTwoRoll)
+                    + "\n");
+            if (playerOneRoll == playerTwoRoll) {
+                System.out.println("It's a tie! Restarting"
+                        + "\n=================\n");
+                consecutiveWins = 0;
+                lastWinner = 0;
+                //restarting the loop
+                continue;
+                //conditions can be presented from one players perspective
+                //and if that player doesn't win, the other player is made
+                //the winner
+            } else if (playerOneRoll == ROCK && playerTwoRoll == PAPER ||
+                    playerOneRoll == ROCK && playerTwoRoll == SPOCK ||
+                    playerOneRoll == PAPER && playerTwoRoll == SCISSORS ||
+                    playerOneRoll == PAPER && playerTwoRoll == LIZARD ||
+                    playerOneRoll == SCISSORS && playerTwoRoll == ROCK ||
+                    playerOneRoll == SCISSORS && playerTwoRoll == SPOCK ||
+                    playerOneRoll == LIZARD && playerTwoRoll == SCISSORS ||
+                    playerOneRoll == LIZARD && playerTwoRoll == ROCK ||
+                    playerOneRoll == SPOCK && playerTwoRoll == LIZARD ||
+                    playerOneRoll == SPOCK && playerTwoRoll == PAPER) {
+                winner = player2;
+            } else {
+                winner = player1;
+            }
 
-           System.out.println("Winner is: " + convert(winner)
-                   +"\n=================\n");
+            System.out.println("Winner is: " + convert(winner)
+                    + "\n=================\n");
 
-           //Checking if a player has won for the first time or it's a
-           //consecutive win
-           if (getLastWinner() == 0 || getLastWinner() == winner) {
-               consecutiveWins++;
-           } else {
-               consecutiveWins = 0;
-           }
+            //Checking if a player has won for the first time or it's a
+            //consecutive win
+            if (getLastWinner() == 0 || getLastWinner() == winner) {
+                consecutiveWins++;
+            } else {
+                consecutiveWins = 0;
+            }
 
-           //setting lastWinner to the current round winner to be compared on next
-           //loop iteration
-           lastWinner = winner;
-       }
+            //setting lastWinner to the current round winner to be compared on next
+            //loop iteration
+            lastWinner = winner;
+        }
 
 
         System.out.println("Winner of the Game is " + convert(lastWinner) + "!");

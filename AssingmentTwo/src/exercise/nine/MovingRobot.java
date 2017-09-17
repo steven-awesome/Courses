@@ -19,6 +19,7 @@ public class MovingRobot extends Robot {
     /**
      * Verifies the next move for a robot does not take the out of
      * bounds
+     *
      * @return boolean whether next move is within boundaries or not
      */
     public boolean validateNextMove() {
@@ -46,14 +47,16 @@ public class MovingRobot extends Robot {
 
     /**
      * Generates a new random number from 1-9
+     *
      * @return int result of new generated random int
      */
     public int generateNextMove() {
-        return new Random().nextInt(8) +1;
+        return new Random().nextInt(8) + 1;
     }
 
     /**
      * Verifies if 2 robots occupy the same x & y coordinates
+     *
      * @param r1 1st robot
      * @param r2 2nd robot
      * @return boolean whether the 2 robots are occupying same space
@@ -65,6 +68,7 @@ public class MovingRobot extends Robot {
 
     /**
      * iterates through a robots history of moves and prints result
+     *
      * @return String history of robots moves
      */
     public String printMoves() {
@@ -77,34 +81,34 @@ public class MovingRobot extends Robot {
      * Assigns the robot to the space specified in the nextMove field
      */
     public void move() {
-        switch(nextMove) {
+        switch (nextMove) {
             case UP:
-                setY(getY()-1);
+                setY(getY() - 1);
                 break;
             case DOWN:
-                setY(getY()+1);
+                setY(getY() + 1);
                 break;
             case LEFT:
-                setX(getX()-1);
+                setX(getX() - 1);
                 break;
             case RIGHT:
-                setX(getX()+1);
+                setX(getX() + 1);
                 break;
             case LEFT_UP_CORNER:
-                setX(getX()-1);
-                setY(getY()-1);
+                setX(getX() - 1);
+                setY(getY() - 1);
                 break;
             case LEFT_DOWN_CORNER:
-                setX(getX()-1);
-                setY(getY()+1);
+                setX(getX() - 1);
+                setY(getY() + 1);
                 break;
             case RIGHT_UP_CORNER:
-                setX(getX()+1);
-                setY(getY()-1);
+                setX(getX() + 1);
+                setY(getY() - 1);
                 break;
             case RIGHT_DOWN_CORNER:
-                setX(getX()+1);
-                setY(getY()+1);
+                setX(getX() + 1);
+                setY(getY() + 1);
                 break;
         }
         moves.add(nextMove);
@@ -113,11 +117,11 @@ public class MovingRobot extends Robot {
     }
 
     public static void main(String[] args) {
-        MovingRobot r1 = new MovingRobot(0,0);
-        MovingRobot r2 = new MovingRobot(9,9);
+        MovingRobot r1 = new MovingRobot(0, 0);
+        MovingRobot r2 = new MovingRobot(9, 9);
 
         while (!sameSlot(r1, r2)) {
-            r1.nextMove =  r1.generateNextMove();
+            r1.nextMove = r1.generateNextMove();
             if (r1.validateNextMove()) {
                 System.out.println("Robot 1 move");
                 r1.move();
