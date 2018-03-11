@@ -2,6 +2,8 @@ package com.assignment1;
 
 //Using the books implementation of a SLList to be used in the exercises that need a SLList
 public class SLList <T> {
+
+
     SLNode head;
     SLNode tail;
     int n;
@@ -14,10 +16,14 @@ public class SLList <T> {
     T push(T x) {
         SLNode u = new SLNode();
         u.x = x;
-        u.next = head;
-        head = u;
-        if (n == 0)
+        if (n == 0) {
+            head = u;
             tail = u;
+            head.next = tail;
+        } else {
+            u.next = head;
+            head = u;
+        }
         n++;
         return x;
     }
@@ -30,7 +36,7 @@ public class SLList <T> {
         return x;
     }
 
-    SLNode<T> get(int nodeIdx) {
+    SLNode<T> getNode(int nodeIdx) {
         SLNode<T> temp = head;
         if (nodeIdx > n) {
             throw new IndexOutOfBoundsException();

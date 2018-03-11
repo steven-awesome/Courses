@@ -1,20 +1,27 @@
+//Steven Morrissey - 3300222
+//Comp 272 - Assignment 1, Question 2
 package com.assignment1;
-
-import java.util.LinkedList;
 
 public class Q2 {
     SLList<Integer> sll = new SLList<>();
     DLList<Integer> dll = new DLList<>();
 
+    /*
+    * Gets the node to be switched and the next node, then adjusts the links so that current and next are swapped
+     */
     public void swapAdjacentSinglyLinked(int nodeIdx) {
-        SLNode<Integer> current = sll.get(nodeIdx);
+        SLNode<Integer> current = sll.getNode(nodeIdx);
         SLNode<Integer> next = current.next;
-        sll.get(nodeIdx - 1).next = next;
+        sll.getNode(nodeIdx - 1).next = next;
         current.next = next.next;
         next.next = current;
 
     }
 
+    /*
+    * Gets the node to be switched, then adjusts all prev and next links of current.prev, current, current.next
+    * and current.next.next so that current and current.next are swapped.
+     */
     public void swapAdjacentDoublyLinked(int nodeIdx) {
         DLNode<Integer> current = dll.getNode(nodeIdx);
         current.prev.next = current.next;
@@ -28,10 +35,10 @@ public class Q2 {
 
     public static void main(String[] args) {
         Q2 q = new Q2();
-        q.dll.add(1);
-        q.dll.add(2);
-        q.dll.add(3);
-        q.dll.add(4);
+        q.dll.push(1);
+        q.dll.push(2);
+        q.dll.push(3);
+        q.dll.push(4);
         System.out.println(q.dll.get(1) + "" + q.dll.get(2));
         q.swapAdjacentDoublyLinked(1);
         System.out.println(q.dll.get(1) + "" + q.dll.get(2));
@@ -39,9 +46,9 @@ public class Q2 {
         q.sll.push(2);
         q.sll.push(3);
         q.sll.push(4);
-        System.out.println(q.sll.get(1).x + "" + q.sll.get(2).x);
-        q.swapAdjacentDoublyLinked(1);
-        System.out.println(q.sll.get(1).x + "" + q.sll.get(2).x);
+        System.out.println(q.sll.getNode(1).x + "" + q.sll.getNode(2).x);
+        q.swapAdjacentSinglyLinked(2);
+        System.out.println(q.sll.getNode(1).x + "" + q.sll.getNode(2).x);
 
     }
 

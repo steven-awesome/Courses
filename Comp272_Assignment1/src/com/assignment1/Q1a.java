@@ -1,17 +1,20 @@
-//Steven Morrissey
+//Steven Morrissey - 3300222
 //Comp 272 - Assignment 1, Question 1a
 package com.assignment1;
 
-/*add(x) inserts a new element at the end of the data structure; different implementations can also insert according to
-**priority, subsequently rearrange according to priority, and/or also delete the smallest value to make space for the
-**new higher priority element.
-**deleteMin() deletes the lowest priority element.
-**size() counts the number of elements currently in the data structure.
+/*
+* add(x) inserts a new element at the end of the data structure; different implementations can also insert according to
+* priority, subsequently rearrange according to priority, and/or also delete the smallest value to make space for the
+* new higher priority element.
+* deleteMin() deletes the lowest priority element.
+* size() counts the number of elements currently in the data structure.
 */
 
-// I wasn't sure of the format for doing this question, so I used a SLList implementation based on the book,
-// having only a Head Node and the methods treating it as a SLList while implementing the priority queue
-// specific requirements.
+/*
+* I wasn't sure of the format for doing this question, so I used a SLList implementation based on the book,
+* having only a Head Node and the methods treating it as a SLList while implementing the priority queue
+* specific requirements.
+*/
 public class Q1a {
     SLList<Integer> list = new SLList<>();
 
@@ -93,10 +96,12 @@ public class Q1a {
         q1a.add(6);
         q1a.add(4);
         //Iterating through showing they are in order starting at the Head from largest value to smallest
+        System.out.println("Printed list after adding all values to queue");
         q1a.iterateThroughList(q1a.list);
 
         q1a.deleteMin();
         //Iterating through to show the smallest value item is deleted after calling deleteMin()
+        System.out.println("Printed list after deleteMin()");
         q1a.iterateThroughList(q1a.list);
 
     }

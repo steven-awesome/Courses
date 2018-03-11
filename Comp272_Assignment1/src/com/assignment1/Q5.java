@@ -1,9 +1,13 @@
+//Steven Morrissey - 3300222
+//Comp 272 - Assignment 1, Question 5
 package com.assignment1;
 
 public class Q5 {
     DLList<Integer> dll = new DLList();
 
-    public DLList reverse(DLList list) {
+    //reverses the given DLList by creating a temp list and adding the original list Nodes in reverse.
+    //made the method static and return the reversed list so it can be used without instantiation.
+    public static DLList reverse(DLList list) {
         //creating a new list to add the reversed list to in order to return it
         DLList temp = new DLList();
         //running through list by getting list size
@@ -15,7 +19,6 @@ public class Q5 {
 
 
     public static void main(String[] args) {
-        Q5 rdll = new Q5();
         DLList<Integer> list = new DLList<>();
         list.add(1);
         list.add(2);
@@ -26,7 +29,7 @@ public class Q5 {
             System.out.println(list.get(i));
         }
         System.out.println("=====");
-        list = rdll.reverse(list);
+        list = Q5.reverse(list);
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }

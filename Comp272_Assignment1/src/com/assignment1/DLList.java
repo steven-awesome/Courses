@@ -45,6 +45,16 @@ public class DLList <T>{
         n++;
     }
 
+    void push(T x) {
+        DLNode node = new DLNode();
+        node.data = x;
+        node.prev = dummy;
+        node.next = dummy.next;
+        dummy.next.prev = node;
+        dummy.next = node;
+        n++;
+    }
+
     int size() {
         return n;
     }

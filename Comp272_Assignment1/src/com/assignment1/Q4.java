@@ -1,38 +1,46 @@
-//Steven Morrissey
+//Steven Morrissey - 3300222
 //Comp 272 - Assignment 1, Question 4
 package com.assignment1;
 
-import com.sun.jmx.remote.internal.ArrayQueue;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.HashMap;
 import java.util.Random;
 
 public class Q4<T> {
 
-    //Using Javas ArrayList as the underlying data structure as its an available structure with add and remove
-    //operations that run at constant time.
-    private ArrayList<T> queue;
+    //Using Javas HasMap as the underlying data structure as its an available structure with add and remove
+    //operations that run at constant time (under well balanced conditions).
+    public HashMap<Integer, T> map;
 
     public Q4() {
-        queue = new ArrayList<>();
+        map = new HashMap();
     }
 
     public void add(T elm) {
-        //ArrayList implementation of add() is constant
-        queue.add(elm);
+        //HashMap implementation of add() in well balanced scenario is constant
+        map.put(map.size(), elm);
     }
 
     public void remove() {
         Random rand = new Random();
-        //Using the ArrayList implementation of remove, the index is determined by a
+        //Using the HasMap implementation of remove, the index is determined by a
         //random number who's max is the size of the container. This is done in constant time as remove is constant
-        //for array implementations, and Random.nextInt is constant due to just performing calculations.
-        queue.remove(rand.nextInt(queue.size() - 1));
+        //for well balanced HasMap implementations, and Random.nextInt is constant due to just performing calculations.
+        map.remove(rand.nextInt(map.size()));
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+
+        Q4<Integer> q4 = new Q4<>();
+        q4.add(1);
+        q4.add(2);
+        q4.add(3);
+        q4.add(4);
+        q4.add(5);
+        System.out.println("Elements as added:");
+        System.out.println(q4.map.toString());
+        q4.remove();
+        System.out.println("Elements with one removed at random:");
+        System.out.println(q4.map.toString());
 
     }
 

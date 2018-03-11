@@ -1,8 +1,6 @@
+//Steven Morrissey - 3300222
+//Comp 272 - Assignment 1, Question 1b
 package com.assignment1;
-
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
 
 /*
 * I don't fully understand this questions as Queues can be of many different types, LIFO, FIFO etc...
@@ -30,7 +28,7 @@ public class Q1b <T> {
         q1b.push(2);
         q1b.push(5);
         q1b.push(3);
-        //popping all 3 elements to show they come o
+        //popping all 3 elements to show they come out LIFO
         System.out.println(q1b.pop());
         System.out.println(q1b.pop());
         System.out.println(q1b.pop());
