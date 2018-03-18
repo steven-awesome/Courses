@@ -1,5 +1,7 @@
 package com.assignment2;
 
+import java.lang.reflect.Array;
+
 public class Q3 {
 
     /*
@@ -9,6 +11,7 @@ public class Q3 {
     * Each credit can pay for some constant, c, units of time spent rebuilding.
     * The scheme gives out a total of O(mlogm) credits and every call to rebuild(u) is paid for with credits stored at u.
     */
+
 
 
 
