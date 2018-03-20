@@ -1,6 +1,7 @@
 package com.assignment2;
 
 import java.util.LinkedList;
+import java.util.Optional;
 import java.util.Queue;
 
 import static java.lang.Integer.compare;
@@ -10,9 +11,9 @@ public class BinaryTree {
     BTNode root;
     int n;
 
-    boolean add(Integer x) {
+    BTNode add(Integer x) {
         BTNode p = findLast(x);
-        return addChild(p, new BTNode(x));
+        return addChild(p, new BTNode(x)).get();
     }
 
     BTNode findLast(Integer x) {
@@ -31,7 +32,7 @@ public class BinaryTree {
         return prev;
     }
 
-    boolean addChild(BTNode p, BTNode u) {
+    Optional<BTNode> addChild(BTNode p, BTNode u) {
         if (p == null) {
             root = u;              // inserting into empty tree
         } else {
@@ -41,12 +42,12 @@ public class BinaryTree {
             } else if (comp > 0) {
                 p.right = u;
             } else {
-                return false;   // u.x is already in the tree
+                return Optional.ofNullable(new BTNode(null));   // u.x is already in the tree
             }
             u.parent = p;
         }
         n++;
-        return true;
+        return Optional.of(u);
     }
 
     int depth(BTNode u) {
@@ -96,12 +97,13 @@ public class BinaryTree {
         if (root != null) q.add(root);
         while (!q.isEmpty()) {
             BTNode u = q.remove();
+            System.out.println(u.value);
             if (u.left != null) q.add(u.left);
             if (u.right != null) q.add(u.right);
         }
     }
 
-    Integer findEQ(Integer x) {
+    BTNode findEQ(Integer x) {
         BTNode u = root;
         while (u != null) {
             int comp = compare(x, u.value);
@@ -110,7 +112,7 @@ public class BinaryTree {
             else if (comp > 0)
                 u = u.right;
             else
-                return u.value;
+                return u;
         }
         return null;
     }
@@ -133,16 +135,6 @@ public class BinaryTree {
         }
         return root;
     }
-
-    public void rebuild() {
-
-    }
-
-
-
-
-
-
 
     public void insert2(BTNode root, BTNode u) {
         if (root == null) {

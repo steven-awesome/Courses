@@ -4,11 +4,12 @@ import java.lang.reflect.Array;
 
 public class ScapegoatTree extends BinaryTree {
 
-    boolean add(Integer x) {
+    int q = n = 0;
+    boolean addST(Integer x) {
         // first do basic insertion keeping track of depth
-        BTNode u = newNode(x);
-        int d = addWithDepth(u);
-        if (d > log32(q)) {
+        BTNode u = insert(root, new BTNode(x));
+        int d = depth(u);
+        if (d > q / 1.5) {
             // depth exceeded, find scapegoat
             BTNode w = u.parent;
             while (3*size(w) <= 2*size(w.parent))
@@ -18,15 +19,12 @@ public class ScapegoatTree extends BinaryTree {
         return d >= 0;
     }
 
-    boolean remove(Integer x) {
-        if (super.remove(x)) {
-            if (2*n < q) {
-                rebuild(r);
-                q = n;
-            }
-            return true;
+    void remove(Integer x) {
+        super.remove(new BTNode(x));
+        if (2*n < q) {
+            rebuild(root);
+            q = n;
         }
-        return false;
     }
 
     void rebuild(BTNode u) {
@@ -45,6 +43,7 @@ public class ScapegoatTree extends BinaryTree {
             p.left.parent = p;
         }
     }
+
     int packIntoArray(BTNode u, BTNode[] a, int i) {
         if (u == null) {
             return i;
@@ -53,6 +52,7 @@ public class ScapegoatTree extends BinaryTree {
         a[i++] = u;
         return packIntoArray(u.right, a, i);
     }
+
     BTNode buildBalanced(BTNode[] a, int i, int ns) {
         if (ns == 0)
             return null;
@@ -64,5 +64,17 @@ public class ScapegoatTree extends BinaryTree {
         if (a[i + m].right != null)
             a[i + m].right.parent = a[i + m];
         return a[i + m];
+    }
+
+    public static void main(String[] args) {
+        ScapegoatTree st = new ScapegoatTree();
+        st.add(1);
+        st.add(5);
+        st.add(2);
+        st.add(4);
+        st.add(3);
+        st.rebuild(st.findEQ(5));
+        st.bfTraverse();
+        System.out.println(st);
     }
 }
