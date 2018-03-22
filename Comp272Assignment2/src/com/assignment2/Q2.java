@@ -1,3 +1,6 @@
+//Steven Morrissey - 3300222
+//Comp272 - Assignment 2 Exercise 2
+
 package com.assignment2;
 
 

@@ -1,3 +1,6 @@
+//Steven Morrissey - 3300222
+//Comp272 - Assignment 2 Exercise 3
+
 package com.assignment2;
 
 import java.lang.reflect.Array;
