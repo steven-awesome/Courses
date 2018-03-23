@@ -74,24 +74,6 @@ public class BinaryTree {
         traverse(u.right);
     }
 
-    void traverse2() {
-        BTNode u = root, prev = null, next;
-        while (u != null) {
-            if (prev == u.parent) {
-                if (u.left != null) next = u.left;
-                else if (u.right != null) next = u.right;
-                else next = u.parent;
-            } else if (prev == u.left) {
-                if (u.right != null) next = u.right;
-                else next = u.parent;
-            } else {
-                next = u.parent;
-            }
-            prev = u;
-            u = next;
-        }
-    }
-
     void bfTraverse() {
         Queue<BTNode> q = new LinkedList<BTNode>();
         if (root != null) q.add(root);
@@ -134,25 +116,6 @@ public class BinaryTree {
             }
         }
         return root;
-    }
-
-    public void insert2(BTNode root, BTNode u) {
-        if (root == null) {
-            root = u;
-        }
-        if (u.value > root.value) {
-            if (root.right != null) {
-                root.right = u;
-            } else {
-                insert2(root.right, u);
-            }
-        } else {
-            if (root.left != null) {
-                root.left = u;
-            } else {
-                insert2(root.left, u);
-            }
-        }
     }
 
     void remove(BTNode u) {

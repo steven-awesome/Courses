@@ -4,13 +4,31 @@ import java.lang.reflect.Array;
 
 import static java.util.Objects.hash;
 
+/*
+* This is the data structure for Q4.
+* This class has its own hashing function of K mod 13, otherwise its a standard
+* HashTable implementation from the book.
+ */
 public class HashTable<T> {
     T[] table;
     int n, d, q;
     private Class<T> tClass;
 
+    //Using a technique to instantiate the underlying array with the class type
     public HashTable(Class<T> clazz) {
         table = (T[]) Array.newInstance(clazz, 13);
+    }
+
+    /*
+    * So the reason why I call the Java has function is because since I made the table
+    * generic, it was easier to get the int value from the hash, and then perform the
+    * mod 13 calculation on it. The Java hash runs in O(n). I found choosing mod 13 as
+    * the hash function strange because the table would resize at some point and then
+    * you have to handle many more collisions if you always calc mod 13 for every entry.
+     */
+    int hashTableCode(T x) {
+
+        return hash(x) % 13;
     }
 
 
@@ -51,11 +69,6 @@ public class HashTable<T> {
             i = (i == table.length-1) ? 0 : i + 1;  // increment i
         }
         return null;
-    }
-
-    int hashTableCode(T x) {
-
-        return hash(x) % 13;
     }
 
     void resize() {

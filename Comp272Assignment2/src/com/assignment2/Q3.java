@@ -3,8 +3,6 @@
 
 package com.assignment2;
 
-import java.lang.reflect.Array;
-
 public class Q3 {
 
     /*
@@ -15,7 +13,7 @@ public class Q3 {
     * The scheme gives out a total of O(mlogm) credits and every call to rebuild(u) is paid for with credits stored at u.
     */
 
-    /*1, 5, 2, 4, 5
+    /*
     *           1
     *                 5
     *             2

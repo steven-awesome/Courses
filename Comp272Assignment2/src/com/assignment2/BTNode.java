@@ -9,4 +9,7 @@ public class BTNode {
     public BTNode(Integer value) {
         this.value = value;
     }
+
+    public BTNode() {
+    }
 }

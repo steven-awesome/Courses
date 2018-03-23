@@ -26,6 +26,9 @@ public class Q2 {
         return isBSTSatisfied;
     }
 
+    /*
+    * Extracted method for clean code, just checks node and its value are null.
+     */
     private boolean isNodeValueNull(BTNode node) {
         return node == null || node.value == null;
     }
