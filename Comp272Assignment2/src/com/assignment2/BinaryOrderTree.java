@@ -12,6 +12,7 @@ import static java.lang.Integer.compare;
 * The implementation is based on the structure from the book with some modifications
  */
 public class BinaryOrderTree extends BinaryTree {
+    BTOrderNode BTOroot;
 
     class BTOrderNode extends BTNode {
 
@@ -30,54 +31,7 @@ public class BinaryOrderTree extends BinaryTree {
             this.preOrderNumber = 0;
             this.postOrderNumber = 0;
         }
-    }
 
-    BTOrderNode BTOroot;
-
-    boolean addAll(List<Integer> list) {
-        for (Integer value : list) {
-            add(value);
-        }
-        return true;
-    }
-
-    BTOrderNode add(Integer x) {
-        BTOrderNode p = findLast(x);
-        return addChild(p, new BTOrderNode(x)).get();
-    }
-
-    BTOrderNode findLast(Integer x) {
-        BTOrderNode w = BTOroot, prev = null;
-        while (w != null) {
-            prev = w;
-            int comp = compare(x, w.value);
-            if (comp < 0) {
-                w = w.left;
-            } else if (comp > 0) {
-                w = w.right;
-            } else {
-                return w;
-            }
-        }
-        return prev;
-    }
-
-    Optional<BTOrderNode> addChild(BTOrderNode p, BTOrderNode u) {
-        if (p == null) {
-            BTOroot = u;              // inserting into empty tree
-        } else {
-            int comp = compare(u.value, p.value);
-            if (comp < 0) {
-                p.left = u;
-            } else if (comp > 0) {
-                p.right = u;
-            } else {
-                return Optional.of(new BTOrderNode(null));   // u.x is already in the tree
-            }
-            u.parent = p;
-        }
-        n++;
-        return Optional.of(u);
     }
 
     /*
@@ -95,6 +49,7 @@ public class BinaryOrderTree extends BinaryTree {
         BTOrderNode temp = BTOroot;
         while (!nodes.isEmpty()) {
             BTOrderNode node = nodes.pop();
+            //assigning order number and incrementing index.
             node.preOrderNumber = ++index;
             if (node.right != null) {
                 nodes.push(node.right);
@@ -199,6 +154,52 @@ public class BinaryOrderTree extends BinaryTree {
         if (node.right != null) {
             inOrderPrint(node.right);
         }
+    }
+
+    boolean addAll(List<Integer> list) {
+        for (Integer value : list) {
+            add(value);
+        }
+        return true;
+    }
+
+    BTOrderNode add(Integer x) {
+        BTOrderNode p = findLast(x);
+        return addChild(p, new BTOrderNode(x)).get();
+    }
+
+    BTOrderNode findLast(Integer x) {
+        BTOrderNode w = BTOroot, prev = null;
+        while (w != null) {
+            prev = w;
+            int comp = compare(x, w.value);
+            if (comp < 0) {
+                w = w.left;
+            } else if (comp > 0) {
+                w = w.right;
+            } else {
+                return w;
+            }
+        }
+        return prev;
+    }
+
+    Optional<BTOrderNode> addChild(BTOrderNode p, BTOrderNode u) {
+        if (p == null) {
+            BTOroot = u;              // inserting into empty tree
+        } else {
+            int comp = compare(u.value, p.value);
+            if (comp < 0) {
+                p.left = u;
+            } else if (comp > 0) {
+                p.right = u;
+            } else {
+                return Optional.of(new BTOrderNode(null));   // u.x is already in the tree
+            }
+            u.parent = p;
+        }
+        n++;
+        return Optional.of(u);
     }
 }
 

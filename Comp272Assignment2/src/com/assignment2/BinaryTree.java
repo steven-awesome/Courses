@@ -3,6 +3,7 @@ package com.assignment2;
 import java.util.LinkedList;
 import java.util.Optional;
 import java.util.Queue;
+import java.util.Stack;
 
 import static java.lang.Integer.compare;
 
@@ -10,6 +11,110 @@ public class BinaryTree {
 
     BTNode root;
     int n;
+
+    public BinaryTree(){}
+
+    public BinaryTree(Integer root) {
+        this.root = new BTNode(root);
+    }
+
+    /*
+    * Iterative pre order traversal to find the next traversed node after a given node.
+     */
+    Optional<BTNode> preOrderNext(BTNode nodeToFind) {
+        if (root == null) {
+            return Optional.empty();
+        }
+        Stack<BTNode> nodeStack = new Stack<>();
+        boolean isNextNode = false;
+        nodeStack.push(root);
+        while (!nodeStack.isEmpty()) {
+            BTNode node = nodeStack.pop();
+            if(isNextNode) {
+                return Optional.of(node);
+            }
+            if (node.equals(nodeToFind)) {
+                isNextNode = true;
+            }
+            if (node.right != null) {
+                nodeStack.push(node.right);
+            }
+            if (node.left != null) {
+                nodeStack.push(node.left);
+            }
+        }
+        return Optional.empty();
+    }
+
+    /*
+    * Iterative in order traversal to find the next traversed node after a given node.
+     */
+    Optional<BTNode> inOrderNext(BTNode nodeToFind) {
+        if (root == null) {
+            return Optional.empty();
+        }
+        Stack<BTNode> nodes = new Stack<>();
+        boolean isNextNode = false;
+        nodes.push(root);
+        BTNode node = root;
+        while (node.left != null) {
+            nodes.push(node.left);
+            node = node.left;
+        }
+        while (!nodes.isEmpty()) {
+            node = nodes.pop();
+            if (isNextNode) {
+                return Optional.of(node);
+            }
+            if (node.equals(nodeToFind)) {
+                isNextNode = true;
+            }
+            if (node.right != null) {
+                //we get a right node and then traverse to its leftmost child
+                BTNode temp = node.right;
+                while (temp != null) {
+                    nodes.push(temp);
+                    temp = temp.left;
+                }
+            }
+        }
+        return Optional.empty();
+    }
+
+    /*
+    * Iterative post order traversal to find the next traversed node after a given node.
+     */
+    public Optional<BTNode> postOrderNext(BTNode nodeToFind) {
+        if (root == null) {
+            return null;
+        } else if (root.equals(nodeToFind)) {
+            return Optional.empty();
+        }
+
+        //I found of the 2 iterative post order strategies, the 2 stack one was easier to remember at least
+        //for me.
+        Stack<BTNode> stackleft = new Stack<>();
+        Stack<BTNode> stackright = new Stack<>();
+        stackleft.push(root);
+        while (!stackleft.isEmpty()) {
+            BTNode temp = stackleft.pop();
+            stackright.push(temp);
+            if (temp.left != null) {
+                stackleft.push(temp.left);
+            }
+            if (temp.right != null) {
+                stackleft.push(temp.right);
+            }
+        }
+        while (!stackright.isEmpty()) {
+            BTNode temp = stackright.pop();
+            if (temp.equals(nodeToFind)) {
+                return Optional.ofNullable(stackright.pop());
+
+            }
+        }
+        return  Optional.empty();
+    }
 
     BTNode add(Integer x) {
         BTNode p = findLast(x);
@@ -102,7 +207,7 @@ public class BinaryTree {
     public BTNode insert(BTNode root, BTNode node) {
         if (root == null) {
             root = node;
-        } else if (compare(node.value, root.value) > 0) {
+        } else if (compare(node.value, root.value) < 0) {
             if (root.left == null) {
                 root.left = node;
             } else {
@@ -153,7 +258,5 @@ public class BinaryTree {
         }
         n--;
     }
-
-
 
 }

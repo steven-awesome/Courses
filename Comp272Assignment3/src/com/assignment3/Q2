@@ -1,0 +1,19 @@
+Q2.
+
+/*
+    * The algorithm to solve the transforming of tree T1 into tree T2 where both have the same elements is as follows:
+    *
+    * Build two trees T1 and T2 with same elements but different structure (but keeping the BST property)
+    *
+    *
+    * 1. Check if the trees are empty, and if they are we end the algorithm
+    *
+    * 2. If T1.height == T2.height, and the T1.root, we can simply end
+    *   as they are the same trees
+    *
+    * 3. Recursively (in post order) traverse both trees
+    * 4. If T1.root != T2.root =>  find T2's root node in T1 and rotate it up to the root.
+    * 4-a. If node is left child, do right rotation on it's parent
+    * 4-b. If node is right child do left rotation on it's parent
+    *
+     */

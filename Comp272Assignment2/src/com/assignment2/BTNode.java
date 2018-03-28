@@ -12,4 +12,14 @@ public class BTNode {
 
     public BTNode() {
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof BTNode) {
+            if (this.value == ((BTNode) o).value) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
