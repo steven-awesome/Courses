@@ -1,0 +1,40 @@
+//Steven Morrissey - 3300222
+//Assignment 3 - Exercise 6
+
+/*
+* (10 marks) Exercise 9.7. Why does the method remove(x) in the RedBlackTree 
+* implementation perform the assignment u:parent = w:parent? 
+* Shouldn’t this already be done by the call to splice(w)?
+*/
+
+//I will explain through comments in the following excerpt from the textbook:
+
+//Call to splice
+void splice(Node u) {
+        Node s, p;
+        //Here, we are assigning the successor "s"
+        if (u.left != nil) {
+            s = u.left;
+        } else {
+            s = u.right;
+        }
+        //Here we either set the root to successor, or update node references if not the root
+        if (u == r) {
+            r = s;
+            p = nil;
+        } else {
+            p = u.parent;
+            if (p.left == u) {
+                p.left = s;
+            } else {
+                p.right = s; 
+            }
+        }
+        //This is where the question gets answered... because external null nodes in a RedBlackTree
+        //are treated as black nodes, they wont enter the following condition which updates its parent.
+        //This is why we do a manual update i the RBT remove method after splice
+        if (s != nil) {
+            s.parent = p;
+        }
+        n--;
+    }

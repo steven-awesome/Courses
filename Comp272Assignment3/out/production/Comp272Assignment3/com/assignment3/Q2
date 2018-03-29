@@ -12,9 +12,8 @@ Q2.
     *   as they are the same trees
     *
     * 3. Recursively (in post order) traverse both trees
-    * 4. If T1.root != T2.root => find T2's root node in T1 and rotate it up to the root.
-    * 4-a. => If node is left child, do right rotation on it's parent
-    * 4-b. => If node is right child do left rotation on it's parent
-    * 5. Call the recursion function and repeat above for subtree of every node visited
+    * 4. If T1.root != T2.root =>  find T2's root node in T1 and rotate it up to the root.
+    * 4-a. If node is left child, do right rotation on it's parent
+    * 4-b. If node is right child do left rotation on it's parent
     *
      */
