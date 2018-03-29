@@ -2,22 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79acc211-584c-4664-8722-67ff0be1b10f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/assignment3/Q5b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/assignment3/MeldableHeap.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/assignment3/Q5d.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/assignment3/Q7.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/assignment3/Q4b.java" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../Comp272Assignment2/out/production/Comp272Assignment2/com/assignment2/Q1$BTNode.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../Comp272Assignment2/out/production/Comp272Assignment2/com/assignment2/Q1$BinaryTree.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../Comp272Assignment2/out/production/Comp272Assignment2/com/assignment2/RBTNode.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../Comp272Assignment2/out/production/Comp272Assignment2/com/assignment2/RBTree.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../Comp272Assignment2/out/production/Comp272Assignment2/com/assignment2/ScapegoatTree.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Comp272Assignment3/com/assignment3/Q2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/assignment3/Q2.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Comp272Assignment2/out/production/Comp272Assignment2/com/assignment2/BTNode.class" afterPath="$PROJECT_DIR$/../Comp272Assignment2/out/production/Comp272Assignment2/com/assignment2/BTNode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Comp272Assignment2/out/production/Comp272Assignment2/com/assignment2/BinaryTree.class" afterPath="$PROJECT_DIR$/../Comp272Assignment2/out/production/Comp272Assignment2/com/assignment2/BinaryTree.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Comp272Assignment2/out/production/Comp272Assignment2/com/assignment2/Q1.class" afterPath="$PROJECT_DIR$/../Comp272Assignment2/out/production/Comp272Assignment2/com/assignment2/Q1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Comp272Assignment2/out/production/Comp272Assignment2/com/assignment2/Q2.class" afterPath="$PROJECT_DIR$/../Comp272Assignment2/out/production/Comp272Assignment2/com/assignment2/Q2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/assignment3/Q5a.jpg" afterPath="$PROJECT_DIR$/src/com/assignment3/Q5a.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/assignment3/Q2" afterPath="$PROJECT_DIR$/src/com/assignment3/Q2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Comp272Assignment3/com/assignment3/Q5a.jpg" afterPath="$PROJECT_DIR$/out/production/Comp272Assignment3/com/assignment3/Q5a.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Comp272Assignment3/com/assignment3/Q2" afterPath="$PROJECT_DIR$/out/production/Comp272Assignment3/com/assignment3/Q2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/assignment3/Q4.java" afterPath="$PROJECT_DIR$/src/com/assignment3/Q4.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Comp272_Assignment1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Comp272_Assignment1/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -57,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MeldableHeap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/assignment3/MeldableHeap.java">
+      <file leaf-file-name="Q4.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+            <state relative-caret-position="574">
+              <caret line="119" column="45" lean-forward="true" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,48 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Q5d.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q5d.java">
+      <file leaf-file-name="Q4b.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q4b.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Q2" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q2">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="87" lean-forward="true" selection-start-line="17" selection-start-column="87" selection-end-line="17" selection-end-column="87" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Q5a.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q5a.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Q3.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q3.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-372">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Q4.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q4.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="410">
+              <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -150,6 +113,8 @@
         <option value="$PROJECT_DIR$/src/com/assignment3/MeldableHeap.java" />
         <option value="$PROJECT_DIR$/src/com/assignment3/Q5d.java" />
         <option value="$PROJECT_DIR$/src/com/assignment3/Q2" />
+        <option value="$PROJECT_DIR$/src/com/assignment3/Q4.java" />
+        <option value="$PROJECT_DIR$/src/com/assignment3/Q4b.java" />
       </list>
     </option>
   </component>
@@ -223,7 +188,45 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Q7">
+  <component name="RunManager" selected="Application.Q4">
+    <configuration name="Q3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.assignment3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.assignment3.Q3" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Comp272Assignment3" />
+      <envs />
+    </configuration>
+    <configuration name="Q4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.assignment3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.assignment3.Q4" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Comp272Assignment3" />
+      <envs />
+    </configuration>
     <configuration name="Q7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -321,9 +324,16 @@
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Application.Q7" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Q3" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Q4" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Q7" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Application.Q4" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Q3" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Q7" />
       </list>
     </recent_temporary>
   </component>
@@ -337,7 +347,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522281028863</updated>
-      <workItem from="1522281031012" duration="11631000" />
+      <workItem from="1522281031012" duration="15960000" />
     </task>
     <task id="LOCAL-00001" summary="Assignment 3">
       <created>1522281113279</created>
@@ -350,7 +360,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11631000" />
+    <option name="totallyTimeSpent" value="15960000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1294" height="1047" extended-state="0" />
@@ -362,7 +372,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5032415" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298217" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.49675852" order="-1" side_tool="false" content_ui="tabs" />
@@ -402,7 +412,7 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -411,22 +421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3859">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-372">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -479,9 +473,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q2">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="87" lean-forward="true" selection-start-line="17" selection-start-column="87" selection-end-line="17" selection-end-column="87" />
+        <state relative-caret-position="323">
+          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q4b.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q8">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/assignment3/Q4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="119" column="45" lean-forward="true" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
