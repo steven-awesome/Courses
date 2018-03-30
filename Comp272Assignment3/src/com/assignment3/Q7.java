@@ -1,3 +1,5 @@
+//Steven Morrissey - 3300222
+//Assignment 3 - Exercise 7
 package com.assignment3;
 
 import java.util.Random;
@@ -13,14 +15,18 @@ public class Q7 {
         MeldableHeap mh1 = new MeldableHeap();
         mh1.add(5);
         mh1.add(50);
-        mh1.add(25);
+        //decided to just give a node to be removed rather than implement a find function...
+        BTNode toRemove = mh1.add(25);
         mh1.add(33);
         mh1.add(100);
         mh1.add(12);
-
-        mh1.remove(mh1.find(mh1.root, 25));
-
-        System.out.println(mh1.find(mh1.root, 25).value);
+        //Traversing to show data before removal
+        mh1.traverseHeap(mh1.root);
+        System.out.println("=============");
+        //Removing
+        mh1.remove(toRemove);
+        //Displaying data without removed node
+        mh1.traverseHeap(mh1.root);
 
 
     }

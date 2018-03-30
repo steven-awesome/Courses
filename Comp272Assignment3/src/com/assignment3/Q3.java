@@ -50,7 +50,6 @@ public class Q3 {
     public static void main(String... args) {
         Q3 q3 = new Q3();
 
-
         System.out.println("Are set 1 and 2 the same?: " + q3.checkEqualityOfSet(q3.set1, q3.set2));
         System.out.println("Are set 1 and 4 the same?: " + q3.checkEqualityOfSet(q3.set1, q3.set3));
     }

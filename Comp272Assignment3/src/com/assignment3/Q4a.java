@@ -4,7 +4,7 @@ import java.util.*;
 
 import static java.util.Arrays.asList;
 
-public class Q4 {
+public class Q4a {
 
     /*
     * Wikipedia (n.d.) [Article] Retrieved from:
@@ -15,7 +15,9 @@ public class Q4 {
     * This is the main method that takes a list and through breaking it down into
     * smaller lists, adds them into another list in sorted order.
      */
-    /*public static int[] mergeSort(int [] list) {
+    public static int[] mergeSort(int [] list) {
+        //We want lists down down into single sized lists so we check for this
+        //during recursion
         if (list.length <= 1) {
             return list;
         }
@@ -60,7 +62,7 @@ public class Q4 {
         // copy what's left
         System.arraycopy(first, iFirst, result, j, first.length - iFirst);
         System.arraycopy(second, iSecond, result, j, second.length - iSecond);
-    }*/
+    }
 
     public List<Integer> merge_sort(List<Integer> toBeSorted) {
         if (toBeSorted.isEmpty()) {
@@ -120,7 +122,7 @@ public class Q4 {
     public static void main(String... args) {
         List<Integer> list = asList(3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5);
 
-        Q4 q4 = new Q4();
+        Q4a q4 = new Q4a();
         List<Integer> sortedList = q4.merge_sort(list);
         sortedList.forEach(num -> System.out.println(num));
     }

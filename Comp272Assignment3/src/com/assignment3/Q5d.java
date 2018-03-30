@@ -9,10 +9,11 @@ public class Q5d {
     * Choose a vertex to start at
     * Loop:
     *   Add all white (if any) adjacent edges to L
-    *   Mark all added vertices as grey
+    *   Mark all added edges as grey
     *   Remove vertex from end of L
     *   If vertex is not black
     *       Traverse edge to next vertex
-    *       Mark edge as black
+    *       Mark edge as grey
+    *
      */
 }

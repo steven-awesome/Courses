@@ -9,6 +9,35 @@ public class MeldableHeap {
     int n;
     BTNode root;
 
+    /*
+    * Using merge to do the removal and restructure.
+     */
+    BTNode remove(BTNode node) {
+        if (node == null) {
+            return null;
+        }
+        BTNode mergedNode;
+        mergedNode = merge(node.left, node.right);
+        if (mergedNode == null) {
+            return null;
+        }
+        //if parent is not null, need to update parent links
+        if (node.parent != null) {
+            mergedNode.parent = node.parent;
+            if (mergedNode.parent.left != null
+                    && mergedNode.parent.left == node) {
+                mergedNode.parent.left = mergedNode;
+            } else {
+                mergedNode.parent.right = mergedNode;
+            }
+        } else {
+            //Must be root node, make sure parent is null
+            mergedNode.parent = null;
+        }
+        n--;
+        return mergedNode;
+    }
+
     BTNode merge(BTNode h1, BTNode h2) {
         if (h1 == null) {
             return h2;
@@ -19,7 +48,6 @@ public class MeldableHeap {
         if (compare(h2.value, h1.value) < 0) {
             return merge(h2, h1);
         }
-        // now we know h1.x <= h2.x
         if (new Random().nextBoolean()) {
             h1.left = merge(h1.left, h2);
             h1.left.parent = h1;
@@ -30,52 +58,30 @@ public class MeldableHeap {
         return h1;
     }
 
-    boolean add(Integer x) {
+    BTNode add(Integer x) {
         BTNode u = new BTNode();
         u.value = x;
         if (n == 0) {
             root = u;
             n++;
-            return true;
+            return root;
         }
         root = merge(u, root);
         root.parent = null;
         n++;
-        return true;
+        return u;
     }
 
-    BTNode find(BTNode root, Integer x) {
-        if (root.value.equals(x)) {
-            return root;
-        } else {
-            if (root.left != null) {
-                return find(root.left, x);
-            }
-            if (root.right != null) {
-                return find(root.right, x);
-            }
-            return root;
+    public void traverseHeap(BTNode node) {
+        if (node == null) {
+            return;
         }
-
-    }
-
-    BTNode remove(BTNode node) {
-        BTNode mergedNode;
-        if (node.left == null && node.right == null) {
-            mergedNode = null;
+        if (node.left != null) {
+            traverseHeap(node.left);
         }
-        mergedNode = merge(node.left, node.right);
-        if (node.parent != null) {
-            mergedNode.parent = node.parent;
-            if (mergedNode.parent.left != null
-                    && mergedNode.parent.left == node) {
-                mergedNode.parent.left = mergedNode;
-            } else {
-                mergedNode.parent.right = mergedNode;
-            }
-        } else {
-            mergedNode.parent = null;
+        System.out.println(node.value);
+        if (node.right != null) {
+            traverseHeap(node.right);
         }
-        return mergedNode;
     }
 }
