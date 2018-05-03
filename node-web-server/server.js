@@ -50,7 +50,7 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/bad', (req, res) => {
-    res.send({
+    res.send(500, {
         errorMessage: "Error handling request"
     });
 })
