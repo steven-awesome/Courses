@@ -1,4 +1,4 @@
-package com.assignment2;
+package com.assignment3;
 
 public class BTNode {
     BTNode left;

@@ -1,4 +1,4 @@
-package com.assignment2;
+package com.assignment3;
 
 import java.util.LinkedList;
 import java.util.Optional;
@@ -16,6 +16,9 @@ public class BinaryTree {
 
     public BinaryTree(Integer root) {
         this.root = new BTNode(root);
+    }
+    public BinaryTree(BTNode root) {
+        this.root = root;
     }
 
     /*

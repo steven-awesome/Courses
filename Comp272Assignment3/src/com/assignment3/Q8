@@ -1,0 +1,27 @@
+
+Lets take the example BT1.height = 3. This means after the root, there are 3 more levels (root height = 0)
+Now, lets draw out BT1, but lets reduce the height to 2, and max out the number of nodes possible
+
+                                        x
+                        x                               x
+                x               x               x               x
+
+This produces a height of 2, but # of nodes is 7. In order to add any more nodes, we would need to drop
+down a level since h = 2 is full. This produces the following
+
+                                        x
+                        x                               x
+                x               x               x               x
+      **x**
+
+This proves that in order to reach a height of k, the minimum number of nodes must be log n = 2^3 = 8. Adding
+the one node required to bring the height to 3 makes the total # of nodes = 8.
+
+Now that we established that h = log(n), we assert that h >= log(k) due to the following:
+n >= 2k -1
+which means we can infer...
+n >= k
+and further...
+h = log(n) >= log(k)
+...
+h >= log(k)
