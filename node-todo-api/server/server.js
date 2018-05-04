@@ -7,7 +7,7 @@ var { mongoose } = require('./db/mongoose.js');
 var { Todo } = require('./models/todo');
 var { User } = require('./models/user');
 const { ObjectID } = require('mongodb');
-var authenticate = require('../middleware/authenticate');
+var authenticate = require('./middleware/authenticate');
 
 if (env === 'development') {
     process.env.PORT = 3000;
@@ -87,14 +87,23 @@ app.post('/users', (req, res) => {
         password: req.body.password
     });
 
-
-    user.save()
-    .then(() => {
-        return user.generateAuthToken();
-    }).then((token) => {
-        res.header('x-auth', token).send(user);
-    }).catch((e) => {
-        res.status(400).send(e);
+    User.find({email: user.email}).then((result) => {
+        console.log(result.entries());
+        if (result.length > 0) {
+            res.status(400).send('account exists with that email');
+        } else {
+            user.save()
+            .then(() => {
+                return user.generateAuthToken();
+            }).then((token) => {
+                res.header('x-auth', token).send(user);
+            }).catch((e) => {
+                res.status(400).send(e);
+            });
+        }
+    })
+    .catch((e) => {
+        console.log('Issue with finding if user exist', e);
     });
 });
 
@@ -114,7 +123,18 @@ var authenticate = (req, res, next) => {
 };
 
 app.get('/users/me', authenticate, (req, res) => {
-    res.send(user);
+    res.send(req.user);
+});
+
+app.post('/users/login', (req, res) => {
+    User.findByCredentials(req.body.email, req.body.password).then((user) => {
+        return user.generateAuthToken().then((token) => {
+            res.header('x-auth', token).send(user);
+        });
+        res.send(user);
+    }).catch((e) => {
+        res.status(400).send(e);
+    });
 });
 
 app.listen(port, () => {
