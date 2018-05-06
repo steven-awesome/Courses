@@ -23,9 +23,9 @@ bcrypt.compare(password, hashed, (err, res) => {
 
 /* var token = jwt.sign(data, '123abc');
 
-var decoded = jwt.verify(token, '123abc');
+*/var decoded = jwt.verify('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YWVkMjU5ZGRmZDQxODI5NTViMmY5MzYiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTI1NDkxMTAxfQ.doS0FEXfsenTVmYfHN9RC_lkJjXDz8MtoxfOO0beG3U', '123abc');
 
-console.log(decoded); */
+console.log(decoded);
 
 /* var msg = 'I am a user';
 var hash = SHA256(msg + 'somesecret').toString();

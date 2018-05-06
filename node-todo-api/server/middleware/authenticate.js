@@ -1,4 +1,4 @@
-var User = require('../models/user.js');
+var { User } = require('../models/user.js');
 
 var authenticate = (req, res, next) => {
     var token = req.header('x-auth');
@@ -10,7 +10,7 @@ var authenticate = (req, res, next) => {
         req.user = user;
         req.token = token;
         next();
-    }).catch((e) => {
+    }, (e) => {
         res.status(401).send();
     });
 };
